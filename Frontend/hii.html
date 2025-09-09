@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #2d89ef;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin: 40px 0;
+    }
+
+    h2 {
+      color: #2d89ef;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      text-align: center;
+    }
+
+    .about img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill, .project {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 150px;
+      text-align: center;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #2d89ef;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1b5fa7;
+    }
+
+    footer {
+      background: #2d89ef;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Name</h1>
+    <p>Web Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <img src="https://via.placeholder.com/150" alt="My photo">
+      <p>Hello! I'm a web developer who loves building simple and useful websites.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="https://via.placeholder.com/200" alt="Project 1">
+          <p>Portfolio Website</p>
+        </div>
+        <div class="project">
+          <img src="https://via.placeholder.com/200" alt="Project 2">
+          <p>Task Manager App</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 My Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
