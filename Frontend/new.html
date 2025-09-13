@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Calculator</title>
+</head>
+<body>
+    <script>
+        // Ask user for numbers
+        let num1 = prompt("Enter first number:");
+        let num2 = prompt("Enter second number:");
+
+        // Check if any number is zero
+        if (num1 === 0 || num2 === 0) {
+            document.write("<h2>One of the numbers is 0</h2>");
+        } else {
+            let add = num1 + num2;
+            let sub = num1 - num2;
+            let mul = num1 * num2;
+            let div = num1 / num2;
+
+            document.write("<h2>Results:</h2>");
+            document.write("Addition: " + add + "<br>");
+            document.write("Subtraction: " + sub + "<br>");
+            document.write("Multiplication: " + mul + "<br>");
+            document.write("Division: " + div + "<br>");
+        }
+    </script>
+</body>
+</html>
