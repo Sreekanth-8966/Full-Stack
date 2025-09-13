@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        <input type="text" id="myInput" placeholder="Enter item text" />
+        <p id="output">Live input here</p>
+        <ul id="list">
+            
+        </ul>
+        <button id="addFirst">Add First</button>
+        <button id="addLast">Add Last</button>
+        <button id="prepend">Prepend</button>
+        <button id="removeLast">Remove Last</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script >
+    $(document).ready(function(){
+  $("#myInput").on("input", function(){
+    $("#output").text($(this).val());
+  });
+  function handleAction(action) {
+    let val = $("#myInput").val().trim();
+
+    // If no input provided but adding, give default
+    if (val === "" && (action === "addFirst" || action === "addLast" || action === "prepend")) {
+      val = "New Item";
+    }
+
+    switch(action) {
+      case "addFirst":
+        $("#list").prepend("<li>" + val + " (added first)</li>");
+        break;
+
+      case "addLast":
+        $("#list").append("<li>" + val + " (added last)</li>");
+        break;
+
+      case "prepend": // demonstration of another action
+        $("#list").prepend("<li>" + val + " (prepended)</li>");
+        break;
+
+      case "removeLast":
+        $("#list li:last").remove();
+        break;
+
+      default:
+        console.log("Unknown action");
+    }
+
+    // Clear the input after action
+    $("#myInput").val("");
+    $("#output").text("");
+  }
+
+  // Button click events → pass an action name
+  $("#addFirst").click(function(){ handleAction("addFirst"); });
+  $("#addLast").click(function(){ handleAction("addLast"); });
+  $("#prepend").click(function(){ handleAction("prepend"); });
+  $("#removeLast").click(function(){ handleAction("removeLast"); });
+
+});
+
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS BootCamp</title>
+    <!--CDN - Content Delivery Network - Speeed up the webpage loading-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Click The Button</h1>
+    <h3>Time Pass</h3>
+    <button id="btn">Click Me</button>
+    <div class="temp">
+        <h2>This Heading  background will change whenerver you click the button</h2>
+    </div>   
+    <input type="text" id="myInput">
+    <p id="output">Hi this text</p>
+    <ul id="list">
+        <li>Item 1</li>
+    </ul>
+    <button id="add">Add Item</button>
+    <button id="addf">Add Item first</button>
+    <button id="remove">Remove Last</button>
+
+     <script>
+        // jQuery code to handle button click event
+        //What is $?- jQuery
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("h1").text("Button Clicked!");
+                $("h3").text("Time Pass Changed");
+                $(".temp h2").css("background-color", "yellow");
+                
+            });
+            $("#btn").dblclick(function(){
+                $("h1").text("Button Clicked! Twice");
+                $("h3").text("Time Pass Changed twice");
+                $(".temp h2").css("background-color", "red");
+                
+            });
+        });
+    </script>
+    <script>
+$("#add").click(function(){
+      $("#list").append("<li>New Item appended from script</li>");
+    });
+    $("#addf").click(function(){
+      $("#list").prepend("<li>New Item prepended from script</li>");
+    });
+    $("#remove").click(function(){
+      $("#list li:first").remove();
+    });
+ 
+
+      $("#myInput").keydown(function(){
+      let val = $("#myInput").val();
+      $("#output").text(val);
+    });
+    </script>
+</body>
+</html>
