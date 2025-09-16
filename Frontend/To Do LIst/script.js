@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
     $("#list").on("click", ".green-btn", function () {
         const li = $(this).closest("li");
-        li.css("background-color", "#b2f2bb"); // light green
+        li.css("background-color", "#b2f2bb"); 
     });
     $("#list").on("click", ".red-btn", function () {
         $(this).closest("li").remove();
